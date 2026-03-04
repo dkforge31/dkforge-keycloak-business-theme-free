@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: dkforge_mailhog
+    ports:
+      - "8025:8025"   # MailHog UI
+      - "1025:1025"   # SMTP
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4.7
+    container_name: dkforge_keycloak_dev
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./DKForge-Business:/opt/keycloak/themes/DKForge-Business:ro
+    depends_on:
+      - mailhog

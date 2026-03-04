@@ -1,0 +1,895 @@
+/* DKForge Business Theme - Professional Enterprise Design */
+
+:root {
+    --primary-color: #1e3a5f;
+    --secondary-color: #2c5aa0;
+    --accent-color: #0d7ba2;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.kc-business-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.kc-business-sidebar {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--bg-white);
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.kc-sidebar-content {
+    max-width: 400px;
+}
+
+.kc-sidebar-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.kc-sidebar-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.kc-features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.kc-features-list li {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.kc-business-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    background: var(--bg-white);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.kc-business-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.kc-logo-business {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.kc-logo-icon {
+    font-size: 2.5rem;
+}
+
+.kc-logo-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.kc-logo-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.kc-business-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kc-business-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.kc-business-header-section {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.kc-form-container {
+    max-width: 450px;
+}
+
+/* Form Styling */
+.kc-login-form-business {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.kc-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kc-form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block;
+}
+
+.kc-input-business {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-light);
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* Password inputs override - always 0 padding top/bottom */
+.kc-password-wrapper input[type="password"],
+.kc-password-wrapper input[type="text"],
+.kc-password-wrapper .kc-input-business {
+    padding: 0 14px !important;
+}
+
+.kc-input-business:focus {
+    border-color: var(--accent-color);
+    background: var(--bg-white);
+    box-shadow: 0 0 0 3px rgba(13, 123, 162, 0.1);
+}
+
+.kc-input-business:invalid {
+    border-color: var(--error-color);
+}
+
+.kc-error-msg {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.required {
+    display: inline;
+    color: var(--error-color);
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.kc-remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.kc-checkbox-business {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.kc-remember-me label {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+
+.kc-button-business {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    border: none;
+    border-radius: 6px;
+    color: var(--bg-white);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.kc-error-button-business{
+    display:inline-block; 
+    margin-top:20px;
+}
+
+.kc-button-fullwidth{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.kc-info-page .kc-button-business-info {
+    margin-top: 20px !important;
+}
+
+.kc-button-business:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 90, 160, 0.25);
+}
+
+.kc-button-business:active {
+    transform: translateY(0);
+}
+
+.kc-button-business:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.kc-password-recovery {
+    text-align: right;
+    margin-top: 12px;
+}
+
+.kc-password-recovery a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.kc-password-recovery a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.kc-social-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.kc-divider-text {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.kc-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kc-social-buttons li {
+    margin: 0;
+    padding: 0;
+}
+
+.kc-social-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #f0f4f8;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.kc-social-button:hover {
+    background: var(--bg-white);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(13, 123, 162, 0.15);
+}
+
+.kc-social-button:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(13, 123, 162, 0.15), 0 2px 8px rgba(13, 123, 162, 0.15);
+}
+
+.kc-social-button i {
+    font-size: 1.2rem;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.kc-social-button .provider-name {
+    display: inline-block;
+}
+
+.kc-registration-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 6px;
+    background: #f0f4f8;
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.kc-registration-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.kc-registration-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* Alerts */
+.kc-alert {
+    padding: 14px 16px;
+    border-radius: 6px;
+    background: #f0f4f8;
+    margin-top:10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.kc-alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.kc-alert-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+}
+
+.kc-alert-warning {
+    background: rgba(251, 146, 60, 0.1);
+    border: 1px solid #fb923c;
+    color: #d97706;
+}
+
+.kc-business-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .kc-business-container {
+        flex-direction: column;
+    }
+
+    .kc-business-sidebar {
+        min-height: auto;
+        padding: 40px 30px;
+    }
+
+    .kc-business-main {
+        padding: 40px 30px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .kc-business-sidebar {
+        padding: 30px 20px;
+    }
+
+    .kc-sidebar-content h1 {
+        font-size: 2rem;
+    }
+
+    .kc-business-main {
+        padding: 30px 20px;
+    }
+
+    .kc-business-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .kc-form-container {
+        max-width: 100%;
+    }
+
+    .kc-input-business {
+        font-size: 16px; /* Prevents zoom on iOS */
+        height: 44px;
+    }
+
+    .kc-password-wrapper {
+        position: relative;
+        width: 100%;
+        height: 44px;
+        display: block;
+    }
+
+    .kc-toggle-password {
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        height: 44px;
+        width: 44px;
+        z-index: 10;
+    }
+}
+
+/* Desktop screens - ensure toggle button styling */
+@media (min-width: 769px) {
+    .kc-password-wrapper {
+        position: relative;
+        width: 100%;
+        height: 44px;
+        display: block;
+    }
+
+    .kc-password-wrapper input[type="password"],
+    .kc-password-wrapper input[type="text"],
+    .kc-password-wrapper .kc-input-business {
+        width: 100%;
+        height: 44px;
+        padding: 0 14px !important;
+        box-sizing: border-box;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background: var(--bg-light);
+        font-size: 1rem;
+        color: var(--text-dark);
+        transition: all 0.2s ease;
+        outline: none;
+    }
+
+    .kc-toggle-password {
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        height: 44px;
+        width: 44px;
+        border: none;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: var(--bg-white);
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 4px 4px 0;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 480px) {
+    .kc-business-sidebar {
+        padding: 20px;
+    }
+
+    .kc-sidebar-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .kc-business-main {
+        padding: 20px;
+    }
+
+    .kc-business-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .kc-form-group label {
+        font-size: 0.9rem;
+    }
+
+    .kc-button-business {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Make all inputs behave exactly like login */
+.kc-input-business {
+    border-color: var(--border-color) !important;
+}
+
+/* Fix invalid state so it doesn't override hover/focus */
+.kc-input-business:invalid {
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+/* Hover identical to login */
+.kc-input-business:hover {
+    border-color: var(--accent-color) !important;
+}
+
+/* Focus identical to login */
+.kc-input-business:focus {
+    border-color: var(--accent-color) !important;
+    background: var(--bg-white) !important;
+    box-shadow: 0 0 0 3px rgba(13, 123, 162, 0.1) !important;
+}
+/* Business OTP Radio Button Styling */
+.kc-business-otp-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(30, 58, 95, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(30, 58, 95, 0.15);
+}
+
+.kc-business-otp-radio-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.kc-business-otp-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--bg-white);
+    transition: all 0.3s ease;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.kc-business-otp-radio:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(44, 90, 160, 0.2);
+}
+
+.kc-business-otp-radio:checked {
+    background: var(--primary-color);
+    box-shadow: inset 0 0 0 3px var(--bg-white), 0 0 0 2px var(--primary-color);
+}
+
+.kc-business-otp-radio:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.2);
+}
+
+.kc-business-otp-label {
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
+}
+
+.kc-business-otp-label span:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.kc-business-otp-radio:checked + .kc-business-otp-label {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.kc-business-otp-radio:hover + .kc-business-otp-label {
+    color: var(--secondary-color);
+}
+
+/* WebAuthn Authenticate Button Styling */
+#authenticateWebAuthnButton {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    border: none !important;
+    color: var(--bg-white) !important;
+    padding: 14px 28px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+    position: relative;
+    overflow: hidden;
+    margin-bottom:25px;
+}
+
+#authenticateWebAuthnButton:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.4) !important;
+}
+
+#authenticateWebAuthnButton:active {
+    transform: translateY(-1px) !important;
+}
+
+#authenticateWebAuthnButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2), 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+/* Authenticator List Items Styling */
+.kcSelectAuthListItem {
+    padding: 18px 20px !important;
+    margin: 12px 0 !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background: var(--bg-white) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.kcSelectAuthListItem:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(13, 123, 162, 0.15) !important;
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.02) 0%, rgba(13, 123, 162, 0.02) 100%) !important;
+}
+
+.kcSelectAuthListItem:focus-within {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2) !important;
+}
+
+/* Authenticator Icon */
+.kcSelectAuthListItemIcon {
+    font-size: 1.8rem !important;
+    color: var(--accent-color) !important;
+    margin-right: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.kcSelectAuthListItem:hover .kcSelectAuthListItemIcon {
+    transform: scale(1.15) rotate(5deg) !important;
+}
+
+/* Authenticator Body Content */
+.kcSelectAuthListItemBody {
+    flex: 1;
+}
+
+.kcSelectAuthListItemHeading {
+    font-weight: 600 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 4px !important;
+}
+
+.kcSelectAuthListItemDescription {
+    font-size: 0.85rem !important;
+    color: var(--text-light) !important;
+}
+
+
+/* Login Form Buttons */
+form .kcButton {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    border: none !important;
+    color: var(--bg-white) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+form .kcButton:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.4) !important;
+}
+
+form .kcButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2), 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+/* Responsive Business WebAuthn */
+@media (max-width: 768px) {
+    #authenticateWebAuthnButton {
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .kcSelectAuthListItem {
+        padding: 14px 16px !important;
+    }
+}
+
+
+
+/* WebAuthn Authenticators List */
+[id^="kc-webauthn-authenticator-item-"] {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 12px !important;
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 6px !important;
+    background: #f0f4f8 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    margin-bottom: 12px !important;
+    margin-top: 12px !important;
+}
+
+[id^="kc-webauthn-authenticator-item-"]:hover {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 2px 8px rgba(13, 123, 162, 0.15) !important;
+}
+
+[id^="kc-webauthn-authenticator-label-"] {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 6px !important;
+}
+
+[id^="kc-webauthn-authenticator-transport-"] {
+    font-size: 0.875rem !important;
+    color: var(--text-light) !important;
+    margin-bottom: 6px !important;
+}
+
+[id^="kc-webauthn-authenticator-label-"] {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: #9ca3af !important;
+    margin-bottom: 6px !important;
+}
+
+[id^="kc-webauthn-authenticator-created-"],
+[id^="kc-webauthn-authenticator-createdlabel-"],
+.kc-authenticator-created {
+    font-size: 0.8rem !important;
+    color: #9ca3af !important;
+}
+
+/* ===== Locale selector (Business) ===== */
+.kc-business-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.kc-business-header-section {
+    margin-bottom: 0;
+}
+
+.kc-locale-business {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.kc-locale-label-business {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.kc-locale-select-business {
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.kc-locale-select-business:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(13, 123, 162, 0.12);
+}
+
+.kc-locale-select-business option {
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* make dropdown options readable everywhere */
+.kc-locale-select-business option{
+  background: var(--bg-white);
+  color: var(--text-dark);
+}
+
+/* Responsive: στο mobile να κάτσει ωραία */
+@media (max-width: 768px){
+  .kc-business-header{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kc-locale-business{
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .kc-locale-select-business{
+    width: auto;
+  }
+}
