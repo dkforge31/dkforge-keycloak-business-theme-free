@@ -11,6 +11,16 @@
   />
 </p>
 
+
+
+---
+
+## 🎬 Demo Video
+
+**Watch the DKForge Business Theme authentication flows in action:**
+
+[Watch the demo video](https://vimeo.com/1170838507)
+
 ---
 
 **DKForge Business – Free Keycloak Theme** is a clean and modern **Keycloak login theme** built for business and enterprise authentication use cases.
@@ -259,12 +269,15 @@ Advanced customization and documentation are available in the **commercial versi
 
 ---
 
-## 📦 Commercial Versions
+## 📦 More Themes & Commercial Versions
 
-Advanced themes, bundles, extended customization guides, and commercial licenses are available on Gumroad.
+This repository contains the **free DKForge Business Theme**.
 
-👉 **[Get the full DKForge themes & bundles](https://gumroad.com/)**  
-*(link will be updated)*
+Additional **premium themes, bundles, and extended customization guides** are available on Gumroad.
+
+
+👉 **Explore more DKForge themes:**  
+👉 [DKForge Themes on Gumroad](https://dkforge.gumroad.com/)
 
 ---
 
